@@ -3,8 +3,8 @@ class Bug < ApplicationRecord
   enum priority: [:low, :medium, :high]
   enum status: [:open, :closed, :monitor]
 
-  validates :title,  presence: true, length: {minimum: 5, maximum: 64}
-  validates :description,  presence: true, length: {minimum: 20, maximum: 600}
+  validates :title, presence: true, length: {minimum: 5, maximum: 64}
+  validates :description, presence: true, length: {minimum: 20, maximum: 600}
 
   belongs_to :user
 end
