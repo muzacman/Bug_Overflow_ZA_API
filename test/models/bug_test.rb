@@ -5,7 +5,7 @@ class BugTest < ActiveSupport::TestCase
     @user = User.create(lname: 'Smith', fname: 'Bob', email:
         'liveswithmom@bobsmith.com', thumbnail: 'mypic.jpg')
     @bug = Bug.create(title: 'Moth2', description: 'There was a moth in the
-        server', issue_type: 0, priority: 2, status: 1, user_id: 1)
+        server', issue_type: 0, priority: 2, status: 1, user_id: @user.id)
   end
 
   test 'bug must be valid' do
